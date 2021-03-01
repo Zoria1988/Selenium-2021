@@ -1,0 +1,28 @@
+1 $$('div#default-menu > ul:nth-child(1) > li.manufacturers.dropdown')
+  $x('//*[@id="default-menu"]/ul[1]/li[3]')
+
+2 $$('#default-menu > ul.nav.navbar-nav.navbar-right > li.account.dropdown')
+  $x('//*[@id="default-menu"]/ul[2]/li[2]')
+
+3 $$('#box-recently-viewed-products > div > div:nth-child(2)')
+  $x('//*[@id="box-recently-viewed-products"]/div/div[2]')
+
+4 $$('#box-popular-products > div [alt*=Green]')
+  $x('//*[@id="box-popular-products"]//img[contains(@alt,"Green")]')
+ 
+5 $$('#box-latest-products > div > article:nth-child(1) > a > div.info > div.price-wrapper > strong')
+  $x('//*[@id="box-latest-products"]/div/article[1]/a/div[2]/div[2]/strong')
+
+6 $$('#box-latest-products > div > article:nth-child(3)')
+  $x('//*[@id="box-latest-products"]/div/article[3]')
+
+7 $$('.form-group.required [type=email]')
+  $x('//*[contains(@class,"form-group required")]//input[contains(@type,"email")]')
+
+8 $$('.form-group:nth-child(3)')
+  $x('//*[contains(@class,"form-group")] [2]')
+
+9 $$('.dropdown-menu [href="http://158.101.173.161/create_account"]')
+  $x('//*[contains(@class,"dropdown-menu")]//a[contains(@href,"http://158.101.173.161/create_account")]')
+
+
