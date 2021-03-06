@@ -22,7 +22,7 @@ public class homeWork1 {
         ChromeOptions opts = new ChromeOptions();
         opts.addArguments("start-maximized");
         driver = new ChromeDriver(opts);
-        driver.get("http://158.101.173.161/admin/");
+        driver.get("...");
 
         wait = new WebDriverWait(driver,10);
 
@@ -38,6 +38,7 @@ public class homeWork1 {
         login_btn.click();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.id("box-apps-menu")));
+        pause(2);
 
     }
 
@@ -64,11 +65,13 @@ public class homeWork1 {
             WebElement clikMain = driver.findElement(By.xpath("//li[contains(@class,'app')][" + i + "]"));
             wait.until(ExpectedConditions.elementToBeClickable(clikMain));
             clikMain.click();
+            pause(1);
 
             for (int j = 1; j <= subel.size(); j++) {
                 WebElement clickSub = driver.findElement(By.xpath("//li[contains(@class,'doc')][" + j + "]"));
                 wait.until(ExpectedConditions.elementToBeClickable(clickSub));
                 clickSub.click();
+                pause(1);
 
              }
         }
@@ -78,5 +81,12 @@ public class homeWork1 {
     {
         return  drv.findElements(locator).size()>0;
     }
-
+    void pause(int sec)
+    {
+        try {
+            Thread.sleep(sec*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
